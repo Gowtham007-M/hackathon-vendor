@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema({
   phone: { type: String, required: true },
   type: { type: String, enum: ['vendor', 'supplier'], required: true },
   verified: { type: Boolean, default: false },
-  aadhaarDocument: { type: String }, // Store file path or URL
+  aadhaarNumber: { type: String }, // Changed from aadhaarDocument to aadhaarNumber
   location: { type: String },
   rating: { type: Number, default: 0 },
   products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }], // For suppliers

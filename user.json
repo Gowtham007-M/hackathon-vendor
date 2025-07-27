@@ -1,0 +1,19 @@
+{
+  "username": "vendor1",
+  "password": "pass123",
+  "name": "Vendor One",
+  "phone": "9876543210",
+  "userType": "vendor",
+  "gstin": "",
+  "verified": false,
+  "kycDocuments": [],
+  "rating": 0,
+  "totalRatings": 0,
+  "address": {
+    "street": "123 Market Street",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "pincode": "600001",
+    "country": "India"
+  }
+}

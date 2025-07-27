@@ -1,9 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const { register, login } = require('../controllers/authController');
+const authController = require('../controllers/authController');
 const upload = require('../middleware/fileUpload');
 
-router.post('/register', upload.single('aadhaarDocument'), register);
-router.post('/login', login);
+// Export a function that accepts 'io'
+module.exports = (io) => {
+  // Pass 'io' to the controller functions
+  router.post('/register', upload.single('aadhaarDocument'), (req, res) => authController.register(req, res, io));
+  router.post('/login', (req, res) => authController.login(req, res, io));
 
-module.exports = router;
+  return router;
+};
